@@ -13,6 +13,7 @@
   <style>
     #fx_test, #fx_test_2  { text-align: center; background: darkred; color: white; font-size: x-large; }
     #fx_test_2 { background: darkblue; }
+    #loading {width:22px;height:22px;position:absolute;left:50%;top:50%;margin:-16px 0 0 -16px;border-width:5px;border-style:solid;border-color:rgba(0,0,0,.7) rgba(0,0,0,.7) #fff #fff;border-radius:16px;-webkit-animation:load 1s linear infinite}
   </style>
 </head>
 <body>
@@ -25,7 +26,13 @@
   <div style="width: 280px; height: 180px; background: #ddd; -webkit-user-select: none; margin-bottom: 1em">
     <div id="fx_test_2" style="height: 100%; line-height: 170px">I  ♥ fx</div>
   </div>
+  
+  <div style="width: 280px; height: 180px; background: #ddd; -webkit-user-select: none; margin-bottom: 1em">
+    <div id="loading"></div>
+  </div>
 
+  <button onclick="$('#loading').hide()">Hide Without Anim</button>
+  <button onclick="$('#loading').show()">Show Without ANim</button>
   <button onclick="$('#fx_test').hide('slow')">Hide</button>
   <button onclick="$('#fx_test').show('slow')">Show</button>
   <button onclick="$('#fx_test').show()">Reg. show</button>
